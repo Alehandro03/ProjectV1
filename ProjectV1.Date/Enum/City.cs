@@ -8,7 +8,7 @@ namespace ProjectV1.Date.Enums
 {
     public enum City
     {
-        Москва,
+        Москва = 1,
 
         Санкт_Петербург,
 

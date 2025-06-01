@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectV1.Date.Entities
 {
+    [Table("User")]
     public class User
     {
         [Key]
@@ -35,7 +37,7 @@ namespace ProjectV1.Date.Entities
         public int UserLevel { get; set; }
         [Required]
         public DateTime DareCreated { get; set; }
-        public Skills Skills { get; set; }
+        public Skill Skills { get; set; }
         [Required]
         public bool IsDel {  get; set; }
         [Required]

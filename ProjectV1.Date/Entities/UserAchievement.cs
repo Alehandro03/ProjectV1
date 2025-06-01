@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectV1.Date.Entities
 {
-    public class UserAchievements
+    [Table("UserAchievement")]
+    public class UserAchievement
     {
         [Key]
         [Required]
@@ -15,7 +17,7 @@ namespace ProjectV1.Date.Entities
         [Required]
         public User User { get; set; }
         [Required]
-        public List<Achievements> Achievements { get; set; }
+        public List<Achievement> Achievements { get; set; }
         [Required]
         public DateTime Date_Achievements { get; set; }
 
