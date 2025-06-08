@@ -10,15 +10,14 @@ namespace ProjectV1.Date.Entities
 {
     [Table("Achievement")]
     public  class Achievement
-    {
-        [Key]
+    {//1;25
         [Required]
         public int Id {  get; set; }
         [Required]
         public string Name  { get; set; }
         public string Description { get; set; }
         public int Points { get; set; }
-        public UserAchievement UserAchievements { get; set; }
+        public virtual UserAchievement UserAchievements { get; set; }
 
 
     }

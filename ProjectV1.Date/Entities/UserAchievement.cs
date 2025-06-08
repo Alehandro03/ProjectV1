@@ -11,13 +11,12 @@ namespace ProjectV1.Date.Entities
     [Table("UserAchievement")]
     public class UserAchievement
     {
-        [Key]
         [Required]
         public int Id { get; set; }
         [Required]
-        public User User { get; set; }
+        public virtual User User { get; set; }
         [Required]
-        public List<Achievement> Achievements { get; set; }
+        public ICollection<Achievement> Achievements { get; set; }
         [Required]
         public DateTime Date_Achievements { get; set; }
 

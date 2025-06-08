@@ -11,11 +11,11 @@ namespace ProjectV1.Date.Entities
     [Table("Role")]
     public class Role
     {
-        [Key]
         [Required]
         public int Id { get; set; }
         [Required(ErrorMessage = "Поле 'Имя' обязательно для заполнения.")]
         public string Name { get; set; }
+        public virtual ICollection<User> Users {  get; set; }
 
     }
 }

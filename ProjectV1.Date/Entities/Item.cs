@@ -11,7 +11,6 @@ namespace ProjectV1.Date.Entities
     [Table("Item")]
     public class Item
     {
-        [Key]
         [Required]
         public int Id { get; set; }
         public string Discription { get; set; }

@@ -12,13 +12,14 @@ namespace ProjectV1.Date.Entities
     [Table("Location")]
     public class Location
     {
-        [Key]
         [Required]
         public int Id { get; set; }
-        public City City { get; set; }
+        public virtual City City { get; set; }
         public int NumberHome {  get; set; }
         public int Floor { get; set; }
         public int RoomNumber { get; set; }
+        public virtual ICollection<Company> Companies { get; set; }
+        public virtual ICollection<User> Users { get; set; }
 
     }
 }

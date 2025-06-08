@@ -11,7 +11,6 @@ namespace ProjectV1.Date.Entities
     [Table("User")]
     public class User
     {
-        [Key]
         [Required]
         public int Id { get; set; }
         [Required(ErrorMessage = "Поле 'Имя' обязательно для заполнения.")]
@@ -37,12 +36,13 @@ namespace ProjectV1.Date.Entities
         public int UserLevel { get; set; }
         [Required]
         public DateTime DareCreated { get; set; }
-        public Skill Skills { get; set; }
+        public virtual Skill Skills { get; set; }
         [Required]
         public bool IsDel {  get; set; }
         [Required]
-        public Role Role { get; set; }
-        public Location Location { get; set; }
+        public virtual Role Role { get; set; }
+        public virtual Location Location { get; set; }
+        public virtual ICollection<UserAchievement> Achievements { get; set; }
 
 
     }   

@@ -11,12 +11,11 @@ namespace ProjectV1.Date.Entities
     [Table("Company")]
     public class Company
     {
-        [Key]
         [Required]
         public int Id { get; set; }
         [Required(ErrorMessage = "Поле 'Имя' обязательно для заполнения.")]
         public string Name { get; set; }
-        public Location Location { get; set; }
+        public virtual Location Location { get; set; }
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
         [Required]
